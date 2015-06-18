@@ -5,7 +5,7 @@
 library('neuralnet')
 
 # Setting directory to get the file
-setwd('/home/anirudt/Projects/iquest/')
+setwd('.')
 directory <- getwd()
 dat <- read.csv(paste(directory,'/parkinsons.data', sep=""), header = TRUE, sep = ",")
 
@@ -32,7 +32,7 @@ f <- as.formula(paste('status_train ~', paste(n[!n %in% 'status_train'], collaps
 # tweak with the parameters for better results, use help(neuralnet) for more.
 net <- neuralnet(f, train, hidden = 10, threshold=0.01)
 
-test_features <- features_total[150:nrow(features),]
+test_features <- features_total[150:nrow(features_total),]
 status_test = status[150:length(status)]
 net.results <- compute(net, test_features)
 print(net.results$net.result)

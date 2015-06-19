@@ -14,13 +14,13 @@ msm: MelSpectrum MelNbFilters=3 stepSize=5120
 ps: PerceptualSharpness blockSize=10240 stepSize=5120 
 psp: PerceptualSpread blockSize=10240 stepSize=5120 
 # scfpb: SpectralCrestFactorPerBand 
-sd: SpectralDecrease
-sf: SpectralFlatness
-sfpb: SpectralFlatnessPerBand
-sfx: SpectralFlux
-sr: SpectralRolloff
-sss: SpectralShapeStatistics
-ss: SpectralSlope
-sv: SpectralVariation
-tss: TemporalShapeStatistics
-zcr: ZCR
+sd: SpectralDecrease blockSize=10240 stepSize=5120 
+sf: SpectralFlatness blockSize=10240 stepSize=5120 
+#sfpb: SpectralFlatnessPerBand 
+sfx: SpectralFlux blockSize=10240 stepSize=5120 
+sr: SpectralRolloff blockSize=10240 stepSize=5120 
+sss: SpectralShapeStatistics blockSize=10240 stepSize=5120 
+ss: SpectralSlope blockSize=10240 stepSize=5120 
+sv: SpectralVariation blockSize=10240 stepSize=5120 
+#tss: TemporalShapeStatistics
+zcr: ZCR blockSize=10240 stepSize=5120 

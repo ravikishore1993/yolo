@@ -1,0 +1,27 @@
+am : AmplitudeModulation
+ac: AutoCorrelation
+cdod: ComplexDomainOnsetDetection
+egy: Energy
+env: Envelope
+envss: EnvelopeShapeStatistics
+fr: Frames
+lpc: LPC
+lx: Loudness blockSize=1024 stepSize=5120 LMode=Total
+mfcc: MFCC CepsNbCoeffs=3 blockSize=10240 stepSize=5120 
+ms: MagnitudeSpectrum blockSize=2 stepSize=5120
+msm: MelSpectrum MelNbFilters=3 stepSize=5120
+# obsi: OBSI
+# obsir: OBSIR
+ps: PerceptualSharpness blockSize=10240 stepSize=5120 
+psp: PerceptualSpread blockSize=10240 stepSize=5120 
+# scfpb: SpectralCrestFactorPerBand 
+sd: SpectralDecrease
+sf: SpectralFlatness
+sfpb: SpectralFlatnessPerBand
+sfx: SpectralFlux
+sr: SpectralRolloff
+sss: SpectralShapeStatistics
+ss: SpectralSlope
+sv: SpectralVariation
+tss: TemporalShapeStatistics
+zcr: ZCR

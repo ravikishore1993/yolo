@@ -1,11 +1,10 @@
-am : AmplitudeModulation
-ac: AutoCorrelation
-cdod: ComplexDomainOnsetDetection
-egy: Energy
-env: Envelope
-envss: EnvelopeShapeStatistics
-fr: Frames
-lpc: LPC
+am : AmplitudeModulation blockSize=10240 stepSize=5120
+ac: AutoCorrelation blockSize=10240  stepSize=5120
+cdod: ComplexDomainOnsetDetection blockSize=10240  stepSize=5120
+egy: Energy blockSize=10240  stepSize=5120
+envss: EnvelopeShapeStatistics blockSize=10240  stepSize=5120
+lpc: LPC blockSize=10240  stepSize=5120
+lsf: LSF  blockSize=10240  stepSize=5120
 lx: Loudness blockSize=1024 stepSize=5120 LMode=Total
 mfcc: MFCC CepsNbCoeffs=3 blockSize=10240 stepSize=5120 
 ms: MagnitudeSpectrum blockSize=2 stepSize=5120

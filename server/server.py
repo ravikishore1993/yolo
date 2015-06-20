@@ -80,10 +80,7 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         sound = AudioSegment.from_file(absolutefilepath,filetype)
         sound.export(absolutefilepath.replace(filetype,'wav'), format="wav")
         absolutefilepath = absolutefilepath.replace(filetype,'wav')
-        os.environ["PYTHONPATH"] = ":/usr/local/python_packages"
-        os.environ["LD_LIBRARY_PATH"] = ":/usr/local/lib"
-        os.environ["YAAFE_PATH"] = "/usr/local/yaafe_extensions"
-        print os.popen('yaafe.py -r 44100 -c features '+absolutefilepath).read() 
+        print os.popen('yaafe.py -r 44100 -p Metadata=False -c features '+absolutefilepath).read()
         if result=='false':
             print('##############################')
             pass

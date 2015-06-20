@@ -20,7 +20,7 @@ print csv_files
 # Concating all features into one
 for file in csv_files:
     print file
-    data = pandas.read_csv(file, header=None, skiprows=5)
+    data = DataFrame.from_csv(file, header=None)
     mean_data = data.mean()
     frames = [concated_data, mean_data]
     concated_data = pandas.concat(frames) 

@@ -19,6 +19,7 @@ def avger(encoded_file_name, result):
     # Listing csv files in pwd
     print csv_files
 
+
     # Concating all features into one
     for file in csv_files:
         print file

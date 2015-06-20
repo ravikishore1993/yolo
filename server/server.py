@@ -21,6 +21,12 @@ import sys
 from pydub import AudioSegment
 from subprocess import call
 import pymean
+import pydub
+import math
+
+ignore_start_length = 100
+ignore_end_length = 100
+testsample_duration = 500
 
 if len(sys.argv) > 2:
     PORT = int(sys.argv[2])
@@ -82,9 +88,30 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         sound = AudioSegment.from_file(absolutefilepath,filetype)
         sound.export(absolutefilepath.replace(filetype,'wav'), format="wav")
         absolutefilepath = absolutefilepath.replace(filetype,'wav')
-        print os.popen('yaafe.py -r 44100 -c features -o csv -p Metadata=False '+absolutefilepath) 
+        newfilename = encoded_file_name+upload.filename.replace(filetype,'wav')
+
+        ### Segment of the code to analyze length of the audio clip and split accordingly
+        MainAudioFile = AudioSegment.from_file(absolutefilepath,'wav')
+        MainAudioDuration = MainAudioFile.duration_seconds
+        TotalMinimumDuration = ignore_start_length+ignore_end_length+testsample_duration
+        # Case when duration is less than ignore_start_length+ignore_end_length+testsample_duration
+        SplitFiles = []
+        if MainAudioDuration*1000 < TotalMinimumDuration :
+            print "LESS THAN MINIMUM DURATIO "
+            pass
+        else :
+            TruncatedFile = MainAudioFile[ignore_start_length:-ignore_end_length]
+            for x in xrange(0,int(math.floor(MainAudioDuration*1000.0/testsample_duration))-1):
+                chunk = TruncatedFile[x:(x+1)*testsample_duration]
+                chunkfilename = str(x) +'_'+ newfilename
+                chunkfilepath = absolutefilepath.replace(newfilename, chunkfilename)
+                chunk.export(chunkfilepath, format="wav")
+                print os.popen('yaafe.py -r 44100 -c features -o csv -p Metadata=False '+chunkfilepath) 
+                pymean.avger(chunkfilename, result)
+            pass
+            
+
         # TODO: Testing and Training mode 
-        pymean.avger(encoded_file_name+upload.filename, result)
         if result=='false':
             print('##############################')
             pass

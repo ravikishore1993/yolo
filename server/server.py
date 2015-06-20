@@ -20,6 +20,7 @@ import random
 import sys
 from pydub import AudioSegment
 from subprocess import call
+import pymean
 
 if len(sys.argv) > 2:
     PORT = int(sys.argv[2])
@@ -64,7 +65,8 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             logging.warning("Upload not found in POST request")
             self.wfile.write("No file uploaded")
             return
-        absolutefilepath = os.path.join('/tmp',str(random.randint(1,1000))+upload.filename)    
+        encoded_file_name = str(random.randint(1,1000))
+        absolutefilepath = os.path.join('/tmp',encoded_file_name+upload.filename)    
         fout = file(absolutefilepath,'wb')
         while 1:
             chunk = upload.file.read(10000)
@@ -80,10 +82,12 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         sound = AudioSegment.from_file(absolutefilepath,filetype)
         sound.export(absolutefilepath.replace(filetype,'wav'), format="wav")
         absolutefilepath = absolutefilepath.replace(filetype,'wav')
-        os.environ["PYTHONPATH"] = ":/usr/local/python_packages"
-        os.environ["LD_LIBRARY_PATH"] = ":/usr/local/lib"
-        os.environ["YAAFE_PATH"] = "/usr/local/yaafe_extensions"
-        print os.popen('yaafe.py -r 44100 -c features '+absolutefilepath).read() 
+        #os.environ["PYTHONPATH"] = ":/usr/local/python_packages"
+        #os.environ["LD_LIBRARY_PATH"] = ":/usr/local/lib"
+        #os.environ["YAAFE_PATH"] = "/usr/local/yaafe_extensions"
+        print os.popen('yaafe.py -r 44100 -c features -o csv -p Metadata=False '+absolutefilepath) 
+        # TODO: Testing and Training mode 
+        pymean.avger(encoded_file_name+upload.filename, result)
         if result=='false':
             print('##############################')
             pass

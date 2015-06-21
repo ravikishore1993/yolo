@@ -29,11 +29,10 @@ def avger(encoded_file_name, result):
         concated_data = pandas.concat(frames) 
     print concated_data.shape
 
-
-    #concated_data = concated_data.T
-    #concated_data = list(concated_data)
     concated_data = concated_data[0].tolist()
     print concated_data
+    
+    # In case it is a test case, will not append any status
     if result=='true':
         concated_data.append(1)
     if result=='false':

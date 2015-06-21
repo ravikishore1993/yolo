@@ -23,6 +23,7 @@ from subprocess import call
 import pymean
 import pydub
 import math
+import brain
 
 ignore_start_length = 100
 ignore_end_length = 100
@@ -108,6 +109,7 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
                 chunk.export(chunkfilepath, format="wav")
                 print os.popen('yaafe.py -r 44100 -c features -o csv -p Metadata=False '+chunkfilepath) 
                 pymean.avger(chunkfilename, result)
+            brain.main(result)
             pass
             
 

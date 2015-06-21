@@ -33,9 +33,10 @@ def avger(encoded_file_name, result):
     #concated_data = concated_data.T
     #concated_data = list(concated_data)
     concated_data = concated_data[0].tolist()
+    print concated_data
     if result=='true':
         concated_data.append(1)
-    else:
+    if result=='false':
         concated_data.append(0)
     print len(concated_data)
     for file in csv_files:
@@ -45,4 +46,5 @@ def avger(encoded_file_name, result):
     writer.writerow(list(concated_data))
     f.close()
     #np.savetxt('/tmp/'+encoded_file_name[0:-4]+'.csv', concated_data, delimiter=',')
+
 # TODO: Piping output into a file

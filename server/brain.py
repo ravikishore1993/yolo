@@ -28,6 +28,9 @@ def data_populater(result):
     return feat
 # New function
 def NN_train_master():
+    data = np.genfromtxt('../data/data.csv', delimiter = ',')
+    for x in range(0, data.shape[0]):
+        dataModel.append([(data[x,0:-1]), (data[x,-1],)])
     training_set = SupervisedDataSet(len(dataModel[0][0]), 1)
     print training_set
     i = 1
@@ -40,7 +43,7 @@ def NN_train_master():
         count += 1
         training_set.addSample(i, e)
         print training_set
-    hidden_layers = 10
+    hidden_layers = 20 
     
     net = buildNetwork(len(dataModel[0][0]),hidden_layers, 1, bias=True, hiddenclass = TanhLayer)
     print net

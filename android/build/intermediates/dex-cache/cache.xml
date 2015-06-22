@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/ravi/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-707653a93449b2b99135ee2f4d9d09e725b12abf.jar" />
+    </item>
+    <item
+        jar="/home/ravi/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna/4.1.0/1c12d070e602efd8021891cdd7fd18bc129372d4/jna-4.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1c12d070e602efd8021891cdd7fd18bc129372d4">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/jna-4.1.0-5842ea30195b915f98b6d81eb10f07bdff8bc28a.jar" />
+    </item>
+    <item
+        jar="/home/ravi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/fluent-hc/4.5/6b83009428e935d37c2312b780de64b67f9131a5/fluent-hc-4.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6b83009428e935d37c2312b780de64b67f9131a5">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/fluent-hc-4.5-7c3424441acc4ba33b7c5da9ba7933cc5d7b6d15.jar" />
+    </item>
+    <item
+        jar="/home/ravi/Documents/voicerecorder/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-9a382c39a575823ca248e9d222746a8462161031.jar" />
+    </item>
+    <item
+        jar="/home/ravi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient-cache/4.5/dd8704e3cf3e56c4fc135d5a5e02970d521ccf80/httpclient-cache-4.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="dd8704e3cf3e56c4fc135d5a5e02970d521ccf80">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/httpclient-cache-4.5-a7abaa7cbf20c7bdd78d7eb116a2cd4104be72d3.jar" />
+    </item>
+    <item
+        jar="/home/ravi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpclient-win/4.5/2f384c9c8ed771664b135cdb593e2235e4ea3524/httpclient-win-4.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="2f384c9c8ed771664b135cdb593e2235e4ea3524">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/httpclient-win-4.5-42b32dc90e95a2b901808ad0583f868ecddb2908.jar" />
+    </item>
+    <item
+        jar="/home/ravi/Documents/voicerecorder/app/libs/commons-logging-1.2.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="4bfc12adfe4842bf07b657f0369c4cb522955686">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/commons-logging-1.2-d8182f5fc5cfeaee29460d0144db47041ac38b96.jar" />
+    </item>
+    <item
+        jar="/home/ravi/.gradle/caches/modules-2/files-2.1/net.java.dev.jna/jna-platform/4.1.0/23457ad1cf75c2c16763330de5565a0e67b4bc0a/jna-platform-4.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="23457ad1cf75c2c16763330de5565a0e67b4bc0a">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/jna-platform-4.1.0-b4bb423aa9d95d87e0da54080f3b30e5fcf7fcf1.jar" />
+    </item>
+    <item
+        jar="/home/ravi/Documents/voicerecorder/app/libs/commons-codec-1.9.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="9ce04e34240f674bc72680f8b843b1457383161a">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/commons-codec-1.9-dfb0151a1b416956afa23bbd09b53b7b640005a0.jar" />
+    </item>
+    <item
+        jar="/home/ravi/.gradle/caches/modules-2/files-2.1/org.apache.httpcomponents/httpmime/4.5/7bdb321e86724b16af6134a0fd22fec649eda971/httpmime-4.5.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="7bdb321e86724b16af6134a0fd22fec649eda971">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/httpmime-4.5-5e54b7cad31d9a4947ca280c7a2417b3812c59dc.jar" />
+    </item>
+    <item
+        jar="/home/ravi/Documents/voicerecorder/app/libs/httpcore-4.4.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="f5aa318bda4c6c8d688c9d00b90681dcd82ce636">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/httpcore-4.4.1-aca9a91dc432fcc9c328d80c83bc10ab02fcba97.jar" />
+    </item>
+    <item
+        jar="/home/ravi/Documents/voicerecorder/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/classes-b75d595a44ea674b2354015e2758349d09ad5b6a.jar" />
+    </item>
+    <item
+        jar="/home/ravi/Documents/voicerecorder/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/home/ravi/Documents/voicerecorder/app/build/intermediates/pre-dexed/debug/classes-df5aadd0bb9796c8cf854ba41dcac284d5decf0b.jar" />
+    </item>
+
+</items>

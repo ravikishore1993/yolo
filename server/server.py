@@ -80,10 +80,10 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
             if not chunk: break
             fout.write(chunk)
         fout.close()
-        self.wfile.write("File Uploaded Successfully at "+ absolutefilepath)
+        #self.wfile.write("File Uploaded Successfully at "+ absolutefilepath)
         logging.warning("File Uploaded Successfully at "+ absolutefilepath)
-        print(form.getvalue('result'))
-        result = form.getvalue('result')
+        #print(form.getvalue('result'))
+        result = 'test'#form.getvalue('result')
         filetype = upload.filename.split('.')[-1]
         print filetype
         sound = AudioSegment.from_file(absolutefilepath,filetype)
@@ -98,8 +98,7 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
         # Case when duration is less than ignore_start_length+ignore_end_length+testsample_duration
         SplitFiles = []
         if MainAudioDuration*1000 < TotalMinimumDuration :
-            print "LESS THAN MINIMUM DURATIO "
-            pass
+            print "LESS THAN MINIMUM DURATION"
         else :
             TruncatedFile = MainAudioFile[ignore_start_length:-ignore_end_length]
             for x in xrange(0,int(math.floor(MainAudioDuration*1000.0/testsample_duration))-1):
@@ -107,12 +106,9 @@ class ServerHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
                 chunkfilename = str(x) +'_'+ newfilename
                 chunkfilepath = absolutefilepath.replace(newfilename, chunkfilename)
                 chunk.export(chunkfilepath, format="wav")
-                print os.popen('yaafe.py -r 44100 -c features -o csv -p Metadata=False '+chunkfilepath) 
+                print os.popen('yaafe.py -r 44100 -c features -o csv -p Metadata=False '+chunkfilepath).read() 
                 pymean.avger(chunkfilename, result)
-            brain.main(result)
-            pass
-            
-
+            self.wfile.write(brain.main(result))
         # TODO: Testing and Training mode 
         if result=='false':
             print('##############################')

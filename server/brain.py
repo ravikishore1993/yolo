@@ -95,6 +95,7 @@ def NN_train(feat):
     print "Dumping Neural Net"
     pickle.dump(net2, open(filepath+'net.dmp', 'w'))
     print net2
+    return 50
 
 
 def NN_test(feat):
@@ -130,9 +131,9 @@ def main(result):
     pca = NN_train_master()
     feat = data_populater(result, pca)    
     if result=="true" or result=="false":
-        NN_train(feat)
+        returnvalue = NN_train(feat)
     if result=="test":
-        NN_test(feat)
+        returnvalue = NN_test(feat)
     master_update()
     os.remove('/tmp/data/data.csv')
-    
+    return returnvalue
